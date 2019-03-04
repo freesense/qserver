@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WatchDog", "WatchDog\WatchDog.vcproj", "{6A7DB07D-A2C1-48D5-89BC-6EC541E4F33A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "proxy_auth_server", "..\proxy_auth_server\proxy_auth_server.vcproj", "{0F63C383-292B-46D6-9237-F1E6BA913598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A7DB07D-A2C1-48D5-89BC-6EC541E4F33A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6A7DB07D-A2C1-48D5-89BC-6EC541E4F33A}.Debug|Win32.Build.0 = Debug|Win32
+		{6A7DB07D-A2C1-48D5-89BC-6EC541E4F33A}.Release|Win32.ActiveCfg = Release|Win32
+		{6A7DB07D-A2C1-48D5-89BC-6EC541E4F33A}.Release|Win32.Build.0 = Release|Win32
+		{0F63C383-292B-46D6-9237-F1E6BA913598}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F63C383-292B-46D6-9237-F1E6BA913598}.Debug|Win32.Build.0 = Debug|Win32
+		{0F63C383-292B-46D6-9237-F1E6BA913598}.Release|Win32.ActiveCfg = Release|Win32
+		{0F63C383-292B-46D6-9237-F1E6BA913598}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

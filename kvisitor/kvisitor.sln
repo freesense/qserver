@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kvisitor", "kvisitor\kvisitor.vcproj", "{8C3AAC2F-8C52-4F75-ABE3-8FF198BD618F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{1A7BE3DD-EF78-4793-87D6-6A14FDDBD558}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C3AAC2F-8C52-4F75-ABE3-8FF198BD618F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8C3AAC2F-8C52-4F75-ABE3-8FF198BD618F}.Debug|Win32.Build.0 = Debug|Win32
+		{8C3AAC2F-8C52-4F75-ABE3-8FF198BD618F}.Release|Win32.ActiveCfg = Release|Win32
+		{8C3AAC2F-8C52-4F75-ABE3-8FF198BD618F}.Release|Win32.Build.0 = Release|Win32
+		{1A7BE3DD-EF78-4793-87D6-6A14FDDBD558}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A7BE3DD-EF78-4793-87D6-6A14FDDBD558}.Debug|Win32.Build.0 = Debug|Win32
+		{1A7BE3DD-EF78-4793-87D6-6A14FDDBD558}.Release|Win32.ActiveCfg = Release|Win32
+		{1A7BE3DD-EF78-4793-87D6-6A14FDDBD558}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

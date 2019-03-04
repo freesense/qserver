@@ -1,0 +1,828 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\KLine_Exe.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""afxres.rc""     // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\InvestFlat.ico"
+IDI_SETUP               ICON                    "res\\Setup.ico"
+IDI_SEARCH              ICON                    "res\\search.ico"
+IDI_MAINTENANCE         ICON                    "res\\maintenance.ico"
+IDI_START               ICON                    "res\\start.ico"
+IDI_STOP                ICON                    "res\\stop.ico"
+IDI_DOWN1               ICON                    "res\\down1.ico"
+IDI_DOWN2               ICON                    "res\\down2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 KLine_Exe"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "KLine_Exe 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2008",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_KLINE_EXE_DIALOG DIALOGEX 0, 0, 500, 355
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "K线维护"
+MENU IDR_MENU_MAIN
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_INFO,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,183,7,130,79
+    LISTBOX         IDC_LIST_ERROR,99,115,48,40,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    PUSHBUTTON      "重新检测",IDC_BTN_RECHECK,171,145,50,14
+    PUSHBUTTON      "保存到文件",IDC_BTN_SAVETOFILE,171,163,50,14
+    PUSHBUTTON      "停止检测",IDC_BTN_STOPCHECK,171,127,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "插入记录",IDC_BTN_INSERTRECORD,171,207,50,14
+    PUSHBUTTON      "删除记录",IDC_BTN_DELSELREC,171,239,50,14
+    PUSHBUTTON      "上移记录",IDC_BTN_MOVEPRE,171,258,50,14
+    PUSHBUTTON      "下移记录",IDC_BTN_MOVENEXT,171,276,50,14
+    CONTROL         "",IDC_LIST_FILE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,13,15,82,69
+    PUSHBUTTON      "网上校对",IDC_BTN_USEHTTPDATA,172,180,50,14
+    PUSHBUTTON      "增加记录",IDC_BTN_ADDRECORD,171,223,50,14
+END
+
+IDD_DLG_STOCK_INFO DIALOGEX 0, 0, 378, 286
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "股票信息查询"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_IPSTOCKSERVER,"SysIPAddress32",WS_TABSTOP,53,14,85,12
+    EDITTEXT        IDC_EDIT_PORT,191,14,53,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_STOCKCODE,53,30,85,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO_DATATYPE,191,30,53,43,CBS_DROPDOWN | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "网络查询",IDC_R_NETQUERY,"Button",BS_AUTORADIOBUTTON | WS_GROUP,252,15,48,11
+    CONTROL         "本地查询",IDC_R_LOCALQUERY,"Button",BS_AUTORADIOBUTTON,252,32,48,10
+    PUSHBUTTON      "查询",IDC_BTN_QUERY,317,30,38,12
+    LTEXT           "股票代码：",IDC_STATIC,15,30,38,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,8,364,42
+    LTEXT           "数据类型：",IDC_STATIC,153,30,38,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_LIST_INFO,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,301,265,70,19
+    LTEXT           "股票代码:",IDC_S_DM,15,56,36,8
+    LTEXT           "股票名称:",IDC_S_MC,100,56,36,8
+    LTEXT           "昨日收盘:",IDC_S_ZRSP,213,56,36,8
+    LTEXT           "今日开盘:",IDC_S_JRKP,299,56,36,8
+    LTEXT           "",IDC_S_DM_V,54,56,44,8
+    LTEXT           "",IDC_S_MC_V,137,56,71,8
+    LTEXT           "",IDC_S_ZRSP_V,250,56,44,8
+    LTEXT           "",IDC_S_JRKP_V,334,56,44,8
+    LTEXT           "涨停价格:",IDC_S_ZTJG,15,73,36,8
+    LTEXT           "跌停价格:",IDC_S_DTJG,100,73,36,8
+    LTEXT           "市盈率1:",IDC_S_SYL1,213,73,32,8
+    LTEXT           "市盈率2:",IDC_S_SYL2,299,73,32,8
+    LTEXT           "",IDC_S_ZTJG_V,54,73,44,8
+    LTEXT           "",IDC_S_DTJG_V,137,73,44,8
+    LTEXT           "",IDC_S_SYL1_V,250,73,44,8
+    LTEXT           "",IDC_S_SYL2_V,334,73,44,8
+    LTEXT           "最高价格:",IDC_S_ZGJG,15,90,36,8
+    LTEXT           "最低价格:",IDC_S_ZDJG,100,90,36,8
+    LTEXT           "最近价格:",IDC_S_ZJJG,213,90,36,8
+    LTEXT           "最近成交:",IDC_S_ZJCJ,299,90,36,8
+    LTEXT           "",IDC_S_ZGJG_V,54,90,44,8
+    LTEXT           "",IDC_S_ZDJG_V,137,90,44,8
+    LTEXT           "",IDC_S_ZJJG_V,250,90,44,8
+    LTEXT           "",IDC_S_ZJCJ_V,334,90,44,8
+    LTEXT           "成交数量:",IDC_S_CJSL,15,107,36,8
+    LTEXT           "成交金额:",IDC_S_CJJE,100,107,36,8
+    LTEXT           "成交笔数:",IDC_S_CJBS,213,107,36,8
+    LTEXT           "买价位一:",IDC_S_BJW1,15,124,36,8
+    LTEXT           "",IDC_S_CJSL_V,54,107,44,8
+    LTEXT           "",IDC_S_CJJE_V,137,107,44,8
+    LTEXT           "",IDC_S_CJBS_V,250,107,44,8
+    LTEXT           "",IDC_S_BJW1_V,54,124,44,8
+    LTEXT           "买数量一:",IDC_S_BSL1,100,124,36,8
+    LTEXT           "买价位二:",IDC_S_BJW2,213,124,36,8
+    LTEXT           "买数量二:",IDC_S_BSL2,299,124,36,8
+    LTEXT           "买价位三:",IDC_S_BJW3,15,141,36,8
+    LTEXT           "",IDC_S_BSL1_V,137,124,44,8
+    LTEXT           "",IDC_S_BJW2_V,250,124,44,8
+    LTEXT           "",IDC_S_BSL2_V,334,124,44,8
+    LTEXT           "",IDC_S_BJW3_V,54,141,44,8
+    LTEXT           "买数量三:",IDC_S_BSL3,100,141,36,8
+    LTEXT           "",IDC_S_BSL3_V,137,141,44,8
+    LTEXT           "买价位四:",IDC_S_BJW4,213,141,36,8
+    LTEXT           "买数量四:",IDC_S_BSL4,299,141,36,8
+    LTEXT           "",IDC_S_BJW4_V,250,141,44,8
+    LTEXT           "",IDC_S_BSL4_V,334,141,44,8
+    LTEXT           "买价位五:",IDC_S_BJW5,15,158,36,8
+    LTEXT           "",IDC_S_BJW5_V,54,158,44,8
+    LTEXT           "买数量五:",IDC_S_BSL5,100,158,36,8
+    LTEXT           "",IDC_S_BSL5_V,137,158,44,8
+    LTEXT           "卖价位一:",IDC_S_SJW1,15,175,36,8
+    LTEXT           "",IDC_S_SJW1_V,54,175,44,8
+    LTEXT           "卖数量一:",IDC_S_SSL1,100,175,36,8
+    LTEXT           "卖价位二:",IDC_S_SJW2,213,175,36,8
+    LTEXT           "卖数量二:",IDC_S_SSL2,299,175,36,8
+    LTEXT           "卖价位三:",IDC_S_SJW3,15,192,36,8
+    LTEXT           "",IDC_S_SSL1_V,137,175,44,8
+    LTEXT           "",IDC_S_SJW2_V,250,175,44,8
+    LTEXT           "",IDC_S_SSL2_V,334,175,44,8
+    LTEXT           "",IDC_S_SJW3_V,54,192,44,8
+    LTEXT           "卖数量三:",IDC_S_SSL3,100,192,36,8
+    LTEXT           "",IDC_S_SSL3_V,137,192,44,8
+    LTEXT           "卖价位四:",IDC_S_SJW4,213,192,36,8
+    LTEXT           "卖数量四:",IDC_S_SSL4,299,192,36,8
+    LTEXT           "",IDC_S_SJW4_V,250,192,44,8
+    LTEXT           "",IDC_S_SSL4_V,334,192,44,8
+    LTEXT           "卖价位五:",IDC_S_SJW5,15,209,36,8
+    LTEXT           "",IDC_S_SJW5_V,54,209,44,8
+    LTEXT           "卖数量五:",IDC_S_SSL5,100,209,36,8
+    LTEXT           "",IDC_S_SSL5_V,137,209,44,8
+    LTEXT           " 5 日均手:",IDC_S_5RJS,100,243,36,8
+    LTEXT           "委        比:",IDC_S_WB,100,226,36,8
+    LTEXT           "量        比:",IDC_S_LB,213,226,36,8
+    LTEXT           "内        盘:",IDC_S_NP,299,226,36,8
+    LTEXT           "",IDC_S_5RJS_V,137,243,44,8
+    LTEXT           "",IDC_S_WB_V,137,226,44,8
+    LTEXT           "",IDC_S_LB_V,250,226,44,8
+    LTEXT           "",IDC_S_NP_V,334,226,44,8
+    LTEXT           "外        盘:",IDC_S_WP,15,243,36,8
+    LTEXT           "均        价:",IDC_S_JJ,15,226,36,8
+    LTEXT           "",IDC_S_WP_V,54,243,44,8
+    LTEXT           "",IDC_S_JJ_V,54,226,44,8
+    LTEXT           "服务器 IP：",IDC_STATIC,15,12,37,14,SS_CENTERIMAGE
+    LTEXT           "端        口：",IDC_STATIC,153,12,38,12,SS_CENTERIMAGE
+    LTEXT           "涨跌幅:",IDC_S_ZDF,213,243,28,8
+    LTEXT           "",IDC_S_ZDF_V,250,243,44,8
+    LTEXT           "振        幅:",IDC_S_ZF,299,243,36,8
+    LTEXT           "",IDC_S_ZF_V,334,243,44,8
+    LTEXT           "品种类别:",IDC_S_TYPE,213,209,36,8
+    LTEXT           "",IDC_S_TYPE_V,250,209,44,8
+    LTEXT           "注意：所有价格都乘了1000    成交量和成交金额除了100",IDC_STATIC,15,274,197,8,NOT WS_VISIBLE
+END
+
+IDD_DLG_KLINECFG DIALOGEX 0, 0, 336, 380
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_KFILEPATH,80,10,190,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BUTTON1,279,10,22,12
+    PUSHBUTTON      ">>",IDC_BUTTON2,303,10,16,12
+    EDITTEXT        IDC_EDIT_HISTORYKFILEPATH,80,26,190,12,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE,279,26,22,12,WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BTN_OPEN,303,26,16,12,WS_DISABLED
+    EDITTEXT        IDC_E_KLINEBACKUP,80,42,190,12,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE_BACKUP,279,42,22,12,WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BTN_OPEN_BACKUP,303,42,16,12,WS_DISABLED
+    EDITTEXT        IDC_E_HQKLINEPATH,80,58,190,12,ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE_HQ,279,58,22,12,WS_DISABLED
+    PUSHBUTTON      ">>",IDC_BTN_OPEN_HQ,303,58,16,12,WS_DISABLED
+    EDITTEXT        IDC_E_DATFILEPATH,80,74,190,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSEDATFILE,279,74,22,12
+    PUSHBUTTON      ">>",IDC_BTN_OPENDATAFILE,303,74,16,12
+    EDITTEXT        IDC_EDIT_RESERVECOUNT,107,92,31,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "保留到历史文件",IDC_R_SAVE,"Button",BS_AUTORADIOBUTTON | WS_GROUP,206,95,72,10
+    CONTROL         "删除",IDC_R_DELETE,"Button",BS_AUTORADIOBUTTON,286,95,32,10
+    CONTROL         "",IDC_IP_SQLHQYZ,"SysIPAddress32",WS_TABSTOP,60,144,102,12
+    EDITTEXT        IDC_E_SQLDBNAME,60,160,102,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_SQLUID,199,160,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_SQLPW,279,160,40,12,ES_PASSWORD | ES_AUTOHSCROLL
+    CONTROL         "启用自动检测",IDC_C_AUTOCHECK,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,191,64,12
+    CONTROL         "检测完毕上传K线文件",IDC_C_AUTOUPLOAD,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,86,191,94,12
+    CONTROL         "",IDC_DT_AUTOCHECKTIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,261,191,59,12
+    CONTROL         "启用实时还权",IDC_C_AUTOHUANQUAN,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,208,64,12
+    CONTROL         "上传K线",IDC_C_AUTOUPLOADHQ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,86,208,120,12
+    LTEXT           "上传时间：",IDC_STATIC,207,208,54,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_DT_AUTOHUANQUAN,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,261,208,59,12
+    CONTROL         "启用定时下载k线文件",IDC_C_AUTODOWN,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,14,242,103,12
+    CONTROL         "",IDC_DT_AUTODOWNTIME,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_DISABLED | WS_TABSTOP | 0x8,261,242,59,12
+    CONTROL         "定时下载k线",IDC_C_AUTODOWN_HQ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,14,257,136,12
+    CONTROL         "",IDC_DT_AUTODOWN_HQ,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,261,257,59,12
+    EDITTEXT        IDC_E_FTPSERVER,79,287,83,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_USERNAME,199,287,40,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_PASSWORD,279,287,40,12,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_UPDOWNPATH,79,305,83,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_UPDOWNHQPATH,79,321,83,12,ES_AUTOHSCROLL
+    LTEXT           "k线(当前库)目录：",IDC_STATIC,12,10,65,12,SS_CENTERIMAGE
+    GROUPBOX        "自动检测上传",IDC_STATIC,7,179,322,45
+    LTEXT           "自动检测时间：",IDC_STATIC,207,191,54,12,SS_CENTERIMAGE | WS_DISABLED
+    LTEXT           "K线文件(当前库)保留记录：",IDC_STATIC,12,93,94,12,SS_CENTERIMAGE
+    LTEXT           "条",IDC_STATIC,142,93,11,12,SS_CENTERIMAGE
+    LTEXT           "多余记录：",IDC_STATIC,162,93,40,12,SS_CENTERIMAGE
+    GROUPBOX        "自动下载",IDC_STATIC,7,229,322,44
+    LTEXT           "自动下载时间：",IDC_STATIC,207,242,54,12,SS_CENTERIMAGE | WS_DISABLED
+    GROUPBOX        "FTPServer",IDC_STATIC,7,276,322,60
+    LTEXT           "FTP服务器地址：",IDC_STATIC,14,287,58,12,SS_CENTERIMAGE
+    LTEXT           "用户名：",IDC_STATIC,165,287,31,12,SS_CENTERIMAGE
+    LTEXT           "密码：",IDC_STATIC,256,287,22,12,SS_CENTERIMAGE
+    LTEXT           "原始K线文件目录：",IDC_STATIC,13,304,65,12,SS_CENTERIMAGE
+    LTEXT           "例如：path/sub   如果为空则在根目录下",IDC_STATIC,165,304,154,12,SS_CENTERIMAGE
+    LTEXT           ".dat文件目录 ：",IDC_STATIC,12,74,65,12,SS_CENTERIMAGE
+    GROUPBOX        "查询指定日期收盘价格（供ClosePrice程序使用）",IDC_STATIC,327,358,9,15,NOT WS_VISIBLE
+    LTEXT           "行情服务器IP：",IDC_STATIC,274,354,14,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+    CONTROL         "",IDC_IP_HQSERVER,"SysIPAddress32",NOT WS_VISIBLE | WS_TABSTOP,212,347,11,12
+    LTEXT           "端    口：",IDC_STATIC,173,349,31,12,SS_CENTERIMAGE | NOT WS_VISIBLE
+    EDITTEXT        IDC_E_HQSERVPORT,239,340,15,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "日线文件目录：",IDC_STATIC,309,365,27,8,SS_CENTERIMAGE | NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_DAYFILEPATH,265,335,23,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSDAYFILE,298,350,6,6,NOT WS_VISIBLE
+    PUSHBUTTON      ">>",IDC_BTN_OPENDAYFILE,250,361,16,12,NOT WS_VISIBLE
+    LTEXT           "自动下载时间：",IDC_STATIC,207,257,54,12,SS_CENTERIMAGE
+    LTEXT           "还权k线文件目录：",IDC_STATIC,13,321,65,12,SS_CENTERIMAGE
+    LTEXT           "还权 K 线目录：",IDC_STATIC,12,58,66,12,SS_CENTERIMAGE | WS_DISABLED
+    LTEXT           "临时备份K线目录：",IDC_STATIC,12,42,66,12,SS_CENTERIMAGE | WS_DISABLED
+    LTEXT           "数 据 库 IP：",IDC_STATIC,12,144,44,12,SS_CENTERIMAGE
+    LTEXT           "数 据 库 名：",IDC_STATIC,12,160,46,12,SS_CENTERIMAGE
+    LTEXT           "用户名：",IDC_STATIC,165,160,31,12,SS_CENTERIMAGE
+    LTEXT           "密码：",IDC_STATIC,256,159,22,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,322,118
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,89,322,1
+    GROUPBOX        "还权因子数据库",IDC_STATIC,7,130,322,46
+    CONTROL         "使用网上数据验证最近交易日日线数据",IDC_C_USEHTTPDATA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,109,150,12
+    CONTROL         "只验证",IDC_R_CHECK,"Button",BS_AUTORADIOBUTTON | WS_GROUP,162,111,40,10
+    CONTROL         "验证并替换不匹配的数据",IDC_R_CHECKUPDATE,"Button",BS_AUTORADIOBUTTON,206,111,104,10
+    LTEXT           "K线(历史库)目录：",IDC_STATIC,12,26,66,12,SS_CENTERIMAGE | WS_DISABLED
+END
+
+IDD_DLG_QUERYNETHISTORY DIALOGEX 0, 0, 544, 342
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查询网上历史记录"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FILEPATH,68,10,422,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSEBTN,495,10,22,12
+    PUSHBUTTON      ">>",IDC_BTN_OPENFOLDER,519,10,16,12,NOT WS_VISIBLE | WS_GROUP
+    CONTROL         "",IDC_LIST_INFO,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,30,530,305
+    LTEXT           "网上历史文件：",IDC_STATIC,14,10,52,12,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,530,20
+END
+
+IDD_DLG_MAIN DIALOGEX 0, 0, 503, 317
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "今日投资行情综控台"
+MENU IDR_MENU_MAINDLG
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_C_DEVSERV,173,140,48,68,CBS_DROPDOWNLIST | CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_C_DEV,280,141,48,30,CBS_DROPDOWNLIST | CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_C_LOGTYPE,167,158,48,30,CBS_DROPDOWNLIST | CBS_OWNERDRAWVARIABLE | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_DT_START,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,280,160,48,12
+    CONTROL         "",IDC_DT_STOP,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,346,160,48,12
+    PUSHBUTTON      "重设过滤条件",IDC_CHECK_USE,259,222,50,14,NOT WS_VISIBLE
+    CONTROL         "",IDC_TREE_DEVICE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_EDITLABELS | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP | 0x800,0,0,92,199
+    CONTROL         "",IDC_LIST_STATE,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,114,9,246,91
+    CONTROL         "",IDC_LIST_MSG,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,1,201,246,91
+    LTEXT           "设备服务器：",IDC_S_DEVSERV,121,142,49,8,SS_CENTERIMAGE
+    LTEXT           "设        备：",IDC_S_DEV,233,142,41,8,SS_CENTERIMAGE
+    LTEXT           "日  志 类 型：",IDC_S_LOGTYPE,121,162,49,8,SS_CENTERIMAGE
+    LTEXT           "时间范围：",IDC_S_TIME,233,160,41,8,SS_CENTERIMAGE
+    LTEXT           "To",IDC_S_TO,332,161,9,8,SS_CENTERIMAGE
+    CONTROL         "",IDC_SPLITTER1,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,99,9,1,182
+    CONTROL         "",IDC_SPLITTER2,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,109,116,247,1
+    CONTROL         "加快日志列表的显示速度",IDC_C_ADDSPEED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,195,104,10
+END
+
+IDD_DLG_DEVATTRIBUTE DIALOGEX 0, 0, 253, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设备属性"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_E_DEVNAME,42,7,204,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_PATH,42,22,204,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_PARAM,42,37,204,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_REMARK,7,65,239,69,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "确定",IDOK,163,140,39,12
+    PUSHBUTTON      "取消",IDCANCEL,207,140,39,12
+    LTEXT           "设备名称:",IDC_STATIC,7,7,35,12,SS_CENTERIMAGE
+    LTEXT           "程序路径:",IDC_STATIC,7,22,35,12,SS_CENTERIMAGE
+    LTEXT           "备        注:",IDC_STATIC,7,53,34,12,SS_CENTERIMAGE
+    LTEXT           "参        数:",IDC_STATIC,7,37,35,12,SS_CENTERIMAGE
+END
+
+IDD_DLG_SETUP DIALOGEX 0, 0, 350, 391
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统设置对话框"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB_SETUP,"SysTabControl32",0x0,7,7,336,356
+    PUSHBUTTON      "保存",IDOK,229,370,50,14
+    PUSHBUTTON      "取消",IDCANCEL,293,370,50,14
+END
+
+IDD_DLG_DEVMONITOR DIALOGEX 0, 0, 336, 286
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PORT,93,10,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_DEVTIMEOUT,258,10,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_DEVSERVTIMEOUT,93,25,37,12,ES_AUTOHSCROLL
+    CONTROL         "设备超时重启设备",IDC_C_TIMEOUTRESTART,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,27,80,10
+    CONTROL         "启用设备监控功能",IDC_C_USEDEVMONITOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,196,40,80,10
+    EDITTEXT        IDC_E_MAXRECORD,51,41,37,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IP_DEVSERV,"SysIPAddress32",WS_TABSTOP,72,75,102,12
+    EDITTEXT        IDC_E_DEVSERVPORT,258,75,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_E_APPNAME,72,92,185,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,7,7,322,48
+    LTEXT           "设备监控服务器端口：",IDC_STATIC,14,10,80,12,SS_CENTERIMAGE
+    LTEXT           "设备服务器超时时间：",IDC_STATIC,14,25,80,12,SS_CENTERIMAGE
+    LTEXT           "设备超时时间：",IDC_STATIC,196,10,54,12,SS_CENTERIMAGE
+    GROUPBOX        "监控模块配置",IDC_STATIC,7,59,322,51
+    LTEXT           "设备服务器IP：",IDC_STATIC,14,75,55,12,SS_CENTERIMAGE
+    LTEXT           "设备服务器端口：",IDC_STATIC,196,75,62,12,SS_CENTERIMAGE
+    LTEXT           "AppName：",IDC_STATIC,14,92,55,12,SS_CENTERIMAGE
+    LTEXT           "（程序名称）",IDC_STATIC,258,94,53,12,SS_CENTERIMAGE
+    LTEXT           "秒",IDC_STATIC,298,10,12,12,SS_CENTERIMAGE
+    LTEXT           "(必须重启)",IDC_STATIC,275,38,37,12,SS_CENTERIMAGE
+    LTEXT           "显示最近",IDC_STATIC,14,41,34,12,SS_CENTERIMAGE
+    LTEXT           "条监控记录",IDC_STATIC,93,41,58,12,SS_CENTERIMAGE
+END
+
+IDD_DLG_DEVSERVINFO DIALOGEX 0, 0, 253, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设备服务器属性"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_E_DEVSERVNAME,57,7,189,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_IP_DEVSERV,"SysIPAddress32",WS_TABSTOP,57,22,91,12
+    EDITTEXT        IDC_E_REMARK,7,48,239,85,ES_MULTILINE | ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "确定",IDOK,162,140,39,12
+    PUSHBUTTON      "取消",IDCANCEL,207,140,39,12
+    LTEXT           "服务器名称:",-1,7,7,44,12,SS_CENTERIMAGE
+    LTEXT           "服  务  器 IP:",-1,7,22,42,12,SS_CENTERIMAGE
+    LTEXT           "备            注:",-1,7,36,45,10,SS_CENTERIMAGE
+END
+
+IDD_DLG_DEVVER DIALOGEX 0, 0, 253, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "设备版本信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,107,140,39,12
+    CONTROL         "",IDC_LIST_VER,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,239,129
+END
+
+IDD_DLG_XMLCFG DIALOGEX 0, 0, 253, 159
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "XML配置文件"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,190,145
+    PUSHBUTTON      "下载xml",IDC_BTN_DOWNLOAD,204,7,42,13
+    PUSHBUTTON      "上传xml",IDC_BTN_UPLOAD,204,22,42,13
+    PUSHBUTTON      "打开xml",IDC_BTN_OPEN,204,37,42,13
+    PUSHBUTTON      "删除记录",IDC_BTN_DEL,204,109,42,13
+    PUSHBUTTON      "上移记录",IDC_BTN_UP,204,124,42,13
+    PUSHBUTTON      "下移记录",IDC_BTN_DOWN,204,139,42,13
+    PUSHBUTTON      "添加记录",IDC_BTN_ADD,204,79,42,13
+    PUSHBUTTON      "修改记录",IDC_BTN_MODIFY,204,94,42,13
+END
+
+IDD_DLG_EDIT DIALOGEX 0, 0, 273, 26
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "XML配置文件路径"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_E_PATH,7,7,220,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "确　定",IDOK,232,7,34,12
+END
+
+IDD_DLG_INFO DIALOGEX 0, 0, 241, 30
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "提示消息",IDC_ST_INFO,7,7,170,13,SS_NOTIFY
+    PUSHBUTTON      "取消操作",IDCANCEL,184,9,50,14
+    PUSHBUTTON      "",IDOK,133,9,50,14,NOT WS_VISIBLE
+END
+
+IDD_DLG_COMBITIONFILE DIALOGEX 0, 0, 346, 313
+STYLE DS_ABSALIGN | DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | DS_CENTERMOUSE | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "合并两份Dat文件"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "合并文件",IDCOMBINATION,221,292,50,14
+    PUSHBUTTON      "退    出",IDCANCEL,281,292,50,14
+    GROUPBOX        "待合并文件一",IDC_STATIC,7,7,332,51
+    GROUPBOX        "待合并文件二",IDC_STATIC,7,63,332,51
+    GROUPBOX        "合并后文件",IDC_STATIC,7,119,332,92
+    EDITTEXT        IDC_EDIT_DATPATH1,65,21,222,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE1,291,21,22,12
+    PUSHBUTTON      ">>",IDC_BTN_OPEN1,315,21,16,12
+    LTEXT           "dat文件目录：",IDC_STATIC,12,21,52,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DATPATH2,65,78,222,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE2,291,78,22,12
+    PUSHBUTTON      ">>",IDC_BTN_OPEN2,315,78,16,12
+    LTEXT           "dat文件目录：",IDC_STATIC,12,78,49,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_DATPATH3,65,136,222,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "浏览",IDC_BTN_BROWSE3,291,136,22,12
+    PUSHBUTTON      ">>",IDC_BTN_OPEN3,315,136,16,12
+    LTEXT           "dat文件目录：",IDC_STATIC,12,136,52,12,SS_CENTERIMAGE
+    LTEXT           "可以处理的Symbol最大数量：",IDC_STATIC,173,174,100,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_SYMBOLCOUNT,273,174,58,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "预分配的分钟K线的数量：",IDC_STATIC,12,174,92,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_MINKCOUNT,107,174,58,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "预分配的分笔成交的数量：",IDC_STATIC,12,193,94,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_TICKCOUNT,107,193,58,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "行情文件中数据发生冲突时以哪份数据为准：",IDC_STATIC,12,223,160,12,SS_CENTERIMAGE
+    CONTROL         "待合并文件一",IDC_R_QUOTE_FILE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,188,225,64,10
+    CONTROL         "待合并文件二",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,259,225,64,10
+    LTEXT           "分钟K线文件中数据发生冲突时以哪份数据为准：",IDC_STATIC,12,242,171,12,SS_CENTERIMAGE
+    CONTROL         "待合并文件一",IDC_R_MIN_FILE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,188,244,64,10
+    CONTROL         "待合并文件二",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,259,244,64,10
+    LTEXT           "分笔成交文件中数据发生冲突时以哪份数据为准：",IDC_STATIC,12,261,175,12,SS_CENTERIMAGE
+    CONTROL         "待合并文件一",IDC_R_TICK_FILE1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,188,263,64,10
+    CONTROL         "待合并文件二",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,259,263,64,10
+    EDITTEXT        IDC_EDIT_MAKETCOUNT1,65,39,49,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "市场个数：",IDC_STATIC,12,39,42,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_MAKETCOUNT2,65,95,49,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "市场个数：",IDC_STATIC,12,95,42,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT_MAKETCOUNT3,65,155,49,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "市场个数：",IDC_STATIC,12,155,42,12,SS_CENTERIMAGE
+    GROUPBOX        "合并规则",IDC_STATIC,7,212,332,67
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,3,0,1
+ PRODUCTVERSION 2,3,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "深圳市今日投资财经资讯有限公司"
+            VALUE "FileDescription", "QuoteConsole"
+            VALUE "FileVersion", "2, 3, 0, 1"
+            VALUE "InternalName", "KLine_Exe.exe"
+            VALUE "LegalCopyright", "深圳市今日投资财经资讯有限公司"
+            VALUE "OriginalFilename", "KLine_Exe.exe"
+            VALUE "ProductName", "QuoteConsole"
+            VALUE "ProductVersion", "2, 3, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_KLINE_EXE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 493
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 348
+    END
+
+    IDD_DLG_STOCK_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 371
+        VERTGUIDE, 142
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_DLG_KLINECFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        VERTGUIDE, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 373
+    END
+
+    IDD_DLG_QUERYNETHISTORY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 537
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+    END
+
+    IDD_DLG_MAIN, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 496
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 310
+    END
+
+    IDD_DLG_DEVATTRIBUTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        VERTGUIDE, 42
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DLG_SETUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 384
+    END
+
+    IDD_DLG_DEVMONITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 329
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 279
+    END
+
+    IDD_DLG_DEVSERVINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        VERTGUIDE, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DLG_DEVVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DLG_XMLCFG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_DLG_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 19
+    END
+
+    IDD_DLG_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 23
+    END
+
+    IDD_DLG_COMBITIONFILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 339
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 306
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_MAIN MENU 
+BEGIN
+    POPUP "K线检测(&C)", GRAYED
+    BEGIN
+        MENUITEM "检测单个文件(&O)",                  ID_CHECK_SINGLE_FILE, GRAYED
+        MENUITEM "检测所有文件(&A)",                  ID_CHECKALLFILE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "分割文件(&C)",                    ID_MI_CUTFILE, GRAYED
+    END
+    POPUP "K线同步(&T)"
+    BEGIN
+        MENUITEM "上传原始K线文件(&U)",                ID_UPLOADKFILE, GRAYED
+        MENUITEM "下载原始K线文件(&D)",                ID_DOWNLOADKFILE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "上传还权k线文件(&H)",                ID_MI_UPLOAD_HQ
+        MENUITEM "下载还权k线文件(&Q)",                ID_MI_DOWNLOAD_HQ
+    END
+    POPUP "K线还权(&H)", GRAYED
+    BEGIN
+        MENUITEM "使用数据库因子历史还权(&Q)",             ID_MI_DB_HQ, GRAYED
+        MENUITEM "补还权(&U)",                     ID_UPDATE_WEIGHT, GRAYED
+    END
+END
+
+IDR_MENU_TRAY MENU 
+BEGIN
+    POPUP "TRAY"
+    BEGIN
+        MENUITEM "显示主界面(&S)",                   ID_MENU_SHOW
+        MENUITEM "退出程序(&E)",                    ID_MENU_EXIT
+    END
+END
+
+IDR_MENU_MAINDLG MENU 
+BEGIN
+    POPUP "系统(&F)"
+    BEGIN
+        MENUITEM "启动所有设备(&O)",                  ID_MI_OPENALLDEVICE
+        MENUITEM "关闭所有设备(&C)",                  ID_MI_CLOSEALLDEVICE
+        MENUITEM SEPARATOR
+        MENUITEM "设置(&S)",                      ID_MI_SETUP
+        MENUITEM "保存设备列表(&D)",                  ID_MI_SAVEDEVICELIST
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&E)",                      ID_APP_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                     ID_MI_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_MI_STATUSBAR
+    END
+    POPUP "工具(&T)"
+    BEGIN
+        MENUITEM "K线维护(&K)",                    ID_MI_KLINE
+        MENUITEM "股票信息查询(&R)",                  ID_MI_STOCKINFO
+        MENUITEM "网上下载数据查询(&N)",                ID_MI_NETDOWNDATA
+        MENUITEM SEPARATOR
+        MENUITEM "合并两份Dat文件(&C)",               ID_MI_COMBINATION_DAT_FILE
+    END
+END
+
+IDR_MENU_TREE MENU 
+BEGIN
+    POPUP "TreeMenu"
+    BEGIN
+        MENUITEM "启动选择的设备(&S)",                 ID_TMI_STARTSELDEV
+        MENUITEM "关闭选择的设备(&T)",                 ID_TMI_STOPSELDEV
+        MENUITEM SEPARATOR
+        MENUITEM "添加分组(&G)",                    ID_TMI_ADDGROUP
+        MENUITEM "添加设备服务器(&A)",                 ID_TMI_ADDDEVSERV
+        MENUITEM "添加设备(&D)",                    ID_TMI_ADDDEVICE
+        MENUITEM "修改信息(&M)",                    ID_TMI_MODEFYDEV
+        MENUITEM "删除分组或设备(&R)",                 ID_TMI_DEL
+        MENUITEM SEPARATOR
+        MENUITEM "启动所有设备(&O)",                  ID_TMI_STARTALLDEV
+        MENUITEM "关闭所有设备(&C)",                  ID_TMI_STOPALLDEV
+        MENUITEM SEPARATOR
+        MENUITEM "版本信息(&V)",                    ID_TMI_DEVVERSION
+        MENUITEM "XML配置文件(&F)",                 ID_TMI_XMLCFG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_TOOLBAR             BITMAP                  "res\\toolbar1.bmp"
+IDB_NORMAL              BITMAP                  "res\\ListReport.bmp"
+IDB_ERROR               BITMAP                  "res\\ListReport2.bmp"
+IDB_TREE                BITMAP                  "res\\Tree.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\bmp00001.bmp"
+IDB_TOOLBARBACK         BITMAP                  "res\\Toolbarbk.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR  38, 60
+BEGIN
+    BUTTON      ID_BUTTON32832
+    BUTTON      ID_BUTTON32833
+    SEPARATOR
+    BUTTON      ID_BUTTON32834
+    BUTTON      ID_BUTTON32837
+    SEPARATOR
+    BUTTON      ID_BUTTON32838
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 KLine_Exe(&A)..."
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\KLine_Exe.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "afxres.rc"     // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
